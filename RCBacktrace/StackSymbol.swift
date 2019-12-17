@@ -46,10 +46,10 @@ public class StackSymbol: NSObject {
     }
 }
 
-class StackSymbolFactory {
+public class StackSymbolFactory {
 
     /// Address for which this struct was constructed
-    static func  create(address: UInt, index: Int) -> StackSymbol {
+    public static func  create(address: UInt, index: Int) -> StackSymbol {
         var info = dl_info()
         dladdr(UnsafeRawPointer(bitPattern: address), &info)
 
